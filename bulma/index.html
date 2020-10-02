@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja" style="height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no">
+    <meta name="description" content="My HTML Template">
+    <link rel="shortcut icon" href="https://tm.cranpun-tool.ml/wp-content/themes/themeorg/favicon.ico" />
+
+    <!-- Bulma -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+
+    <!-- my library -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- <script type="text/javascript" src="dist/bundle.js"></script> -->
+
+    <title>My HTML Template</title>
+    <style type="text/css">
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeout {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        .fadein {
+            animation-name: fadein;
+            animation-duration: 500ms;
+            animation-timing-function: ease;
+        }
+    </style>
+</head>
+
+<body id="body" style="display: flex; flex-flow: column; min-height: 100vh;">
+    <header id="header">
+        <nav class="navbar is-info" role="navigation">
+            <section class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="https://hp.cranpun-tool.ml/wp-content/uploads/cranpun-lab_mark_trans.png" alt="cranpun-lab">
+                </a>
+                <a id="burger" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-headermenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+                <script type="text/javascript">
+                    window.addEventListener("load", function() {
+                        const burger = document.querySelector("#burger");
+                        const target = document.getElementById(burger.dataset.target);
+                        burger.addEventListener("click", function() {
+                            burger.classList.toggle("is-active");
+                            burger.classList.toggle("fadein");
+                            target.classList.toggle("is-active");
+                            target.classList.toggle("fadein");
+                        })
+                    })
+                </script>
+            </section>
+            <section id="navbar-headermenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">menuL1</a>
+                    <a class="navbar-item">menuL2</a>
+                </div>
+                <div class="navbar-end">
+                    <a class="navbar-item">menuR1</a>
+                    <a class="navbar-item">menuR2</a>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main id="main" style="flex: 1;">
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <section class="container">
+                    <h1 class="title">My HTML Template</h1>
+                    <h2 class="subtitle">with bulma</h2>
+                </section>
+            </div>
+        </section>
+        <section id="contents" class="section">
+            <div class="container">
+            main contents.
+            </div>
+        <section>
+    </main>
+    <footer id="footer" class="footer">
+        <section class="content has-text-centered">
+        &copy; cranpun-lab
+        </section>
+    </footer>
+</body>
+
+</html>
